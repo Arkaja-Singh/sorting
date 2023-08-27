@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorting Algorithms</title>
+</head>
+<body>
+  <button onclick="randomizeArray()">Randomize Array</button>
+  <button onclick="applySort('insertion')">Insertion Sort</button>
+  <button onclick="applySort('selection')">Selection Sort</button>
+  <button onclick="applySort('bubble')">Bubble Sort</button>
+  <button onclick="applySort('quick')">Quick Sort</button>
+  <button onclick="applySort('merge')">Merge Sort</button>
+  <button onclick="applySort('shell')">Shell Sort</button>
+
+  <script>
+    let bars = [];
+
+    // Generate an array of random values for bars
+    function generateRandomBars(numBars) {
+      const bars = [];
+      for (let i = 0; i < numBars; i++) {
+        bars.push(Math.floor(Math.random() * 100)); // Adjust range as needed
+      }
+      return bars;
+    }
+
+    // Display bars visually
+    function displayBars(bars) {
+      console.log("Bars:", bars);
+    }
+
+    // Sorting algorithms
+    function insertionSort(bars) {
+      // Implement insertion sort algorithm here
+    }
+
+    function selectionSort(bars) {
+      // Implement selection sort algorithm here
+    }
+
+    function bubbleSort(bars) {
+      // Implement bubble sort algorithm here
+    }
+
+    function quickSort(bars) {
+      // Implement quick sort algorithm here
+    }
+
+    function mergeSort(bars) {
+      // Implement merge sort algorithm here
+    }
+
+    function shellSort(bars) {
+      // Implement shell sort algorithm here
+    }
+
+    // Apply a sorting algorithm and display the result
+    function applySort(sortAlgorithm) {
+      const sortedBars = [...bars];
+      switch (sortAlgorithm) {
+        case "insertion":
+          insertionSort(sortedBars);
+          break;
+        case "selection":
+          selectionSort(sortedBars);
+          break;
+        case "bubble":
+          bubbleSort(sortedBars);
+          break;
+        case "quick":
+          quickSort(sortedBars);
+          break;
+        case "merge":
+          mergeSort(sortedBars);
+          break;
+        case "shell":
+          shellSort(sortedBars);
+          break;
+      }
+      displayBars(sortedBars);
+    }
+
+    // Event handler for randomize button
+    function randomizeArray() {
+      bars = generateRandomBars(10); // Adjust number of bars as needed
+      displayBars(bars);
+    }
+
+    // Initial random array on page load
+    randomizeArray();
+  </script>
+</body>
+</html>
